@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git_Github</title>
+</head>
+<body>
+    <header>
+        <h2>Git y Github</h2>
+        <em><h5>Creado el 25/02/2025</h5></em>
+        <img src = "https://victorroblesweb.es/wp-content/uploads/2018/04/git.png"></img>
+    </header>
+    
+<main>
+    <section>
+        <u><h4>¿Cómo funcionan Git y Github?</h4></u>
+
+        <p><strong>Git</strong> es un sistema de control de versiones de código abierto.
+        Fue diseñado para gestionar y los cambios que se hagan en los archivos. tiene soporte para trabajar 
+        en diferentes ramas, lo que lo hace ideal para el manejo de proyectos largos.
+        </p>
+
+        <p><strong>Git Hub</strong> por otra parte es una plataforma que permite guardar código.
+        Cualidad que a desarroladores poder colaborar en distintos proyectos. Este permite poder 
+        tener version de las versiones permitiendo poder rastrear errores, poder agregar caracterizticas al software,
+        para cada proyecto.
+        </p>
+
+        <p>El flujo de trabajo de estos empieza con la creación de un repositorio, ya sea en <strong>Github</strong>
+        lo que crea un repositorio remoto, o en <strong>Git</strong> creandolo de manera local en tu computadora. 
+        En caso de tener un repositorio remoto puedes clonarlo en tu computadora y hacer cambios de manera local en ese repositorio.
+        Para los cambios que se hagan de manera local en el repositorio deberán ser puestos en el área de staging, en la cual se mostraran todos los cambios que se subiran al repositorio.
+        </p>
+    
+        <p><strong>Estos cambios se haran en la rama en la que se este trabajando. Esto aplica para trabajos locales y directamente en el repositorio remoto</strong></p>
+
+        <p>Posterior a esto se dejará evidencia del cambio realizado, donde es recomendable dejar un comentario acerca de los cambios realizados.
+        Después de eso, en caso de trabar remotamente con un repositorio clonado, puedes subir los cambios en la nube. 
+        </p>
+    </section>
+
+    <section>
+        <hr><u><h4>Comandos usados en Git</h4></u></hr>
+
+        <p>Los siguientes comandos son usados en la terminal de Linux y Mac, y en caso de windows es necesario el instalar Git Bash</p>
+        <a href = "https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git"> Link de la página de Git</a>
+        <br></br>
+
+        <table border = "1"> 
+            <thead>
+                <tr>
+                    <th>Comandos</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>git init</td> 
+                    <td>Este comando crea un repositorio de Git en el repositorio en el directorio en el que estas</td>
+                </tr>
+                <tr>
+                    <td>git clone</td>
+                    <td>Este comando es usado para clonar un repositorio remoto en tu computadora</td>
+                </tr>
+                <tr>
+                    <td>git status</td>
+                    <td>Se usa para ver que cambios estan en el área para ser subidos de un repositorio remoto</td>
+                </tr>
+                <tr>
+                    <td>git add</td>
+                    <td>Añade los cambios realizados en el repositorio local a la cola para subirlos al repositorio remoto</td>
+                </tr>
+                <tr>
+                    <td>git commit .m "comentario"</td>
+                    <td>Sube los cambios que estaban en el área de cambios listos, en conjunto con un comentario que describa los cambios realizados</td>
+                </tr>
+                <tr>
+                    <td>git log</td>
+                    <td>Te muestra el historial de todos los commits que se han hecho en el repositorio, tiene los datos del autor y los comentarios hechos</td>
+                </tr>
+                <tr>
+                    <td>git pull</td>
+                    <td>Este comando compara los cambios del repositorio remoto con los del local y los combina en tu repositorio local</td>
+                </tr>
+                <tr>
+                    <td>git push -u origin {nombre de la rama}</td>
+                    <td>Sube los cambios que estan hechos de manera local al repositorio remoto</td>
+                </tr>
+                <tr>
+                    <td>git branch {nombre de la rama}</td>
+                    <td>Crea una rama nueva de trabajo con la versión actual del repositorio local</td>
+                </tr>
+                <tr>
+                    <td>git branch -a</td>
+                    <td>Muestra todas las ramas que se crearon en el repositorio</td>
+                </tr>
+                <tr>
+                    <td>git checkout -b {nombre de la rama}</td>
+                    <td>Crea una rama nueva de trabajo con la versión actual del repositorio local y te cambia a ella automaticamente</td>
+                </tr>
+                <tr>
+                    <td>git checkout {nombre de la rama}</td>
+                    <td>Te cambia a la rama que indiques en el nombre</td>
+                </tr>
+                <tr>
+                    <td>git merge {nombre de la rama}</td>
+                    <td>Compara y combina los contenidos de la rama en la que estás y la rama que indiques en el nombre</td>
+                </tr>
+                <tr>
+                    <td>git branch -d {nombre de la rama}</td>
+                    <td>Borra la rama del repoitorio local que indiques en el nombre</td>
+                </tr>
+                <tr>
+                    <td>git pus origin -d {nombre de la rama}</td>
+                    <td>Borra la rama del repositorio remoto</td>
+                </tr>
+                <tr>
+                    <td>git restore</td>
+                    <td>Sirve para restaurar un commit que se hizo por error</td>
+                </tr>
+                <tr>
+                    <td>git remove {nombre del archivo/directorio}</td>
+                    <td>Quita de la cola para subir los cambios los cambios indicados</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+
+</main>
+
+    <nav>
+    <h4>Otras entradas:</h4>
+    <ul>
+        <li><a href = "Terminal.html"> Comandos de terminal</a></li>
+        <li><a href = "Blog.html"> Página de Inicio</a></li>
+    </ul>
+    </nav>
+</body>
+</html>
