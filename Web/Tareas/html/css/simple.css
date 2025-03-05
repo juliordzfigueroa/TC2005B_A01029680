@@ -32,7 +32,7 @@ main h2{
 }
 
 main{
-    background-color: orange;
+    background-color: rgb(223, 149, 13);
     color: white;
     padding-top: 30px;
     padding-bottom: 50px;
@@ -41,11 +41,11 @@ main{
 }
 
 main p{
-    background-color: orange;
+    background-color: rgb(223, 149, 13);
 }
 
 main h2{
-    background-color: orange;
+    background-color: rgb(223, 149, 13);
 }
 
 
@@ -65,7 +65,7 @@ main h2{
 }
 
 #subscribe_section button{
-    background-color: orange;
+    background-color: rgb(223, 149, 13);
     color: white;
 }
 
