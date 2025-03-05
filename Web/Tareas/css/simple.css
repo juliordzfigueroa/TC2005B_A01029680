@@ -1,0 +1,105 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #464646;
+}
+
+body{
+    margin: 0;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    background-color: #464646;
+    color: white;
+}
+
+header nav a{
+    color: white;
+    margin: 18.72px;
+    padding: 5px;
+    font-size: small;
+}
+
+header h3{
+    margin-left: 20px;
+}
+
+main h2{
+    text-align: center;
+}
+
+main{
+    background-color: orange;
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    padding-left: 100px;
+    padding-right: 40px;
+}
+
+main p{
+    background-color: orange;
+}
+
+main h2{
+    background-color: orange;
+}
+
+
+#subscribe_section{
+    display: flex;
+    color: white;
+    justify-content: center;
+    background-color: #464646;
+}
+
+#subscribe_section form{
+    margin: 16px;
+}
+
+#subscribe_section input{
+    background-color: white;
+}
+
+#subscribe_section button{
+    background-color: orange;
+    color: white;
+}
+
+#image_section {
+    display: flex;
+    margin-top: 5px;
+    justify-content: center;
+    background-color: white;
+}
+
+#image_section div{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    align-items: center;
+    width: 400px;
+    background-color: white;
+}
+
+#image_section p{
+    background-color: white;
+}
+
+#image_section img{
+    background-color: white;
+}
+
+footer
+{
+    margin-top: 30px;
+    color: white;
+    text-align: center;
+    background-color: #464646;
+    padding: 10px;
+    
+}

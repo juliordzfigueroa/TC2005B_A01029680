@@ -1,0 +1,112 @@
+*{
+    font-family: sans-serif;
+    
+}
+
+strong{
+    color:#78dfff;
+}
+
+h1{
+    color: #78dfff;
+    border: #78dfff 3px solid;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    padding: 20px 10px 15px;
+    text-align: center;
+    background-image: url('../images/background_hk.jpg');
+}
+
+h3{
+    color: #1c1b1b;
+    border: #78dfff 3px solid;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 15px 10px 15px;
+    text-align: center;
+    background-color: #78dfff;
+}
+
+h2{
+    color: #1c1b1b;
+    border: #78dfff 3px solid;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 15px 10px 15px;
+    text-align: center;
+    background-color: #78dfff;
+}
+
+h4{
+    color: #1c1b1b;
+    border: #78dfff 3px solid;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 15px 10px 15px;
+    text-align: center;
+    background-color: #78dfff;
+    margin: 0;
+}
+
+h5{
+    color:#78ff78;
+    text-align: center;
+}
+
+img{
+    height: 200px;
+    width: 200px;
+}
+
+header{
+    text-align: center;
+}
+
+body{
+    color: white;
+    font-size: 15px;
+    background-color: rgb(27, 27, 27);
+}
+
+main{
+    padding-left: 30px;
+}
+
+ul{
+    border-left: #78dfff 3px double;
+    border-right: #78dfff 3px double;
+    border-bottom: #78dfff 3px double;
+    border-top: #78dfff 3px double;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-left: 100px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    color: #78dfff;
+    list-style: circle;
+}
+
+ul a{
+    color:#78dfff
+    
+}
+
+ul p{
+    color:white;
+}
+
+nav h4{
+    color: #1c1b1b;
+    border: #78dfff 3px solid;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 15px 10px 15px;
+    text-align: center;
+    background-color: #78dfff;
+    margin: 0;
+}
+
+p{
+    overflow: auto;
+}
