@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="../css/blog.css">
+    <script type="module" src="../js/eventos_dom.js"></script>
+    <title>Eventos y Dom</title>
+</head>
+
+<body>
+    <h1>Eventos y DOM y ChatGPT</h1>
+
+    <div class="container">
+        <h2>Instrucciones</h2>
+        <p>Utiliza ChatGPT y github Copilot para resolver la siguiente actividad. Antes de hacer los ejercicios, contesta las siguientes preguntas. Pregúntale a ChatGPT las preguntas, y verifica que lo que haya generado es correcto. Cuando sea necesario, agrega un ejemplo de código. Incluye una fuente que valide o invalide lo que generó. Agrega elementos de HTML con tus respuestas. (<b>Protip</b>: usa ChatGPT para que las respuestas las ponga directamente en elementos de html.)</p>
+
+        <p>Terminando las preguntas y los ejercicios, documenta tu experiencia con las herramientas en la sección de conclusiones. </p>
+    </div>
+
+    <div class="container">
+        <h3>Preguntas</h3>
+        <ol>
+            <li>¿Qué es el DOM?</li>
+            <p>
+                <h3>Respuesta de ChatGPT</h3>
+                El DOM (Document Object Model) en HTML es una representación estructurada del documento que permite a los lenguajes de programación (como JavaScript) acceder y manipular el contenido, la estructura y el estilo de una página web de manera dinámica. Cuando se carga un documento HTML en el navegador, este crea un árbol de nodos (cada etiqueta se convierte en un nodo), de modo que puedes agregar, eliminar o modificar esos nodos en tiempo real mediante código. Fuente <a href="https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Introduction">MDN Web Docs</a>.
+            </p>
+            <p>
+                <h3>Respuesta de GitHub Copilot</h3>
+                El DOM (Document Object Model) es una interfaz de programación para documentos HTML y XML. Representa la estructura del documento como un árbol de nodos, donde cada nodo es un objeto que representa una parte del documento. Esto permite a los lenguajes de programación, como JavaScript, interactuar con el contenido y la estructura del documento de manera dinámica.
+                El DOM permite acceder y modificar el contenido, la estructura y el estilo de un documento HTML o XML. Cada elemento del documento se representa como un nodo en el árbol DOM, lo que facilita la manipulación de los elementos de la página web.
+                Por ejemplo, puedes usar JavaScript para cambiar el contenido de un elemento, agregar o eliminar elementos, y modificar estilos CSS. El DOM es fundamental para la creación de aplicaciones web interactivas y dinámicas.
+                Fuente <a href="https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Introduction">MDN Web Docs</a>.
+            </p>
+
+            <p>
+                <h3>Es esto cierto?</h3>
+                "DOM significa Document Object Model, en español sería Modelo de Objetos del Documento. Es una interfaz de programación que nos permite crear, cambiar, o remover elementos del documento. También podemos agregar eventos a esos elementos para hacer más dinámica nuestra página.
+
+                El DOM visualiza el documento de HTML como un árbol de tres nodos. Un nodo representa un documento de HTML.
+                
+                Echemos un vistazo a este código de HTML para entender mejor la estructura de árbol del DOM."
+                Por lo tanto, esta información es correcta.
+            </p>
+            <p>Fuente: <a href = "https://www.freecodecamp.org/espanol/news/que-es-el-dom-el-significado-del-modelo-de-objeto-de-documento-en-javascript/">¿Qué es el DOM? El significado del Modelo de Objeto de Documento en JavaScript</a>
+            </p>
+            <li>¿Qué es un nodo?</li>
+            <p>
+                <h3>Respuesta de ChatGPT</h3>
+                En el contexto del DOM (Document Object Model), un nodo es la unidad más básica que compone la estructura de un documento en el navegador. Cada elemento, texto o comentario dentro del DOM se representa internamente como un nodo. Por ejemplo:
+                <p>Una etiqueta HTML (como "div") se convierte en un nodo de elemento (element node).<p>
+
+                <p>El texto dentro de una etiqueta se representa como un nodo de texto (text node).</p>
+
+                <p>Incluso los comentarios HTML se tratan como nodos de comentario (comment node).</p>
+
+                Todos estos tipos de nodos se organizan en un árbol (el árbol DOM), lo que permite al navegador y a los lenguajes de programación (como JavaScript) recorrer y manipular cada parte del documento.
+                Fuente: <a href="https://developer.mozilla.org/es/docs/Web/API/Node">MDN Web Docs</a>.
+            </p>
+            <p>
+                <h3>Respuesta de GitHub Copilot</h3>
+                Un nodo en el contexto del DOM (Document Object Model) es una unidad básica de la estructura del documento. Cada nodo representa una parte del documento HTML o XML, como un elemento, un atributo, un texto o un comentario. Los nodos se organizan en una jerarquía de árbol, donde cada nodo puede tener nodos hijos y un nodo padre.
+                Existen varios tipos de nodos en el DOM, incluyendo:
+                - Nodo de elemento: Representa un elemento HTML (por ejemplo, `<div>`, `<p>`, `<a>`, etc.).
+                - Nodo de texto: Representa el contenido textual dentro de un elemento.
+                - Nodo de atributo: Representa un atributo de un elemento (por ejemplo, `class`, `id`, etc.).
+                - Nodo de comentario: Representa un comentario en el código HTML.
+                - Nodo de documento: Representa el documento completo.
+                Cada nodo tiene propiedades y métodos que permiten interactuar con él, como acceder a su contenido, modificarlo o eliminarlo. El DOM proporciona una forma de navegar y manipular estos nodos utilizando lenguajes de programación como JavaScript.
+                Fuente <a href="https://developer.mozilla.org/es/docs/Web/API/Node">MDN Web Docs</a>.
+            </p>
+            <p>
+                <h3>Es esto cierto?</h3>
+                "Muchos de nuestros estudiantes en KeepCoding nos han dicho que entienden el concepto de nodo en el DOM como una especie de punto de conexión o contacto entre varios elementos del archivo HTML. Este concepto está muy cerca de la realidad, pero podemos concretar un poco más diciendo que un nodo en el DOM es cada una de las etiquetas HTML del árbol jerárquico."
+                Por lo tanto, esta información es correcta.
+                Fuente: <a href = "https://keepcoding.io/blog/que-es-un-nodo-en-el-dom/#%C2%BFQue_es_un_nodo_en_el_DOM">¿Qué es un nodo en el DOM?</a>
+            </p>
+            <li>¿Cómo se accede a un elemento del DOM?</li>
+            <p>
+                <h3>Respuesta de ChatGPT</h3>
+                Para acceder a un elemento del DOM (Document Object Model) utilizando JavaScript, se emplean métodos nativos del objeto document. Los más utilizados son:
+
+                <p>document.getElementById("id_del_elemento")</p>
+
+                <p>Retorna el elemento con el atributo id especificado.</p>
+
+                <p>Ejemplo: const titulo = document.getElementById("miTitulo");</p>
+
+                <p>document.getElementsByClassName("nombre_de_clase")</p>
+
+                <p>Retorna una colección de elementos que comparten la misma clase.</p>
+
+                <p>Ejemplo: const items = document.getElementsByClassName("item");</p>
+
+                <p>document.getElementsByTagName("tag")</p>
+
+                <p>Retorna todos los elementos con la etiqueta especificada.</p>
+
+                <p>Ejemplo: const parrafos = document.getElementsByTagName("p");</p>
+
+                <p>document.querySelector("selector_css")</p>
+
+                <p>Retorna el primer elemento que coincide con el selector CSS.</p>
+
+                <p>Ejemplo: const boton = document.querySelector(".boton-principal");</p>
+
+                <p>document.querySelectorAll("selector_css")</p>
+
+                <p>Retorna todos los elementos que coinciden con el selector CSS.</p>
+
+                <p>Ejemplo: const enlaces = document.querySelectorAll("a");</p>
+
+                Una vez que obtienes la referencia al elemento, puedes manipularlo (por ejemplo, cambiar texto, modificar atributos, etc.).
+                Fuente: <a href="https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Introduction">MDN Web Docs</a>.
+            </p>
+            <p>
+                <h3>Respuesta de GitHub Copilot</h3>
+                Para acceder a un elemento del DOM (Document Object Model) en JavaScript, puedes utilizar varios métodos proporcionados por el objeto `document`. Aquí hay algunos de los métodos más comunes:
+                - `document.getElementById(id)`: Devuelve el elemento con el atributo `id` especificado.
+                - `document.getElementsByClassName(className)`: Devuelve una colección de elementos que tienen la clase especificada.
+                - `document.getElementsByTagName(tagName)`: Devuelve una colección de elementos con la etiqueta especificada.
+                - `document.querySelector(selector)`: Devuelve el primer elemento que coincide con el selector CSS especificado.
+                - `document.querySelectorAll(selector)`: Devuelve una lista de todos los elementos que coinciden con el selector CSS especificado.
+                Fuente: <a href="https://developer.mozilla.org/es/docs/Web/API/Document/getElementById">MDN Web Docs</a>.
+            </p>
+            <p>
+                <h3>Es esto cierto?</h3>
+                "La forma más sencilla de acceder a un elemento en el DOM es mediante su ID único . Podemos obtener un elemento por ID con el getElementById()método del documentobjeto."
+                <p>Por lo tanto, esta información es correcta</p>
+                Fuente: <a href = "https://www.taniarascia.com/how-to-access-elements-in-the-dom/">Acceso a elementos por ID</a>
+            </p>
+
+            <li>¿Cómo se modifica un elemento del DOM?</li>
+            <p>
+                <h3>Respuesta de ChatGPT</h3>
+                Para modificar un elemento del DOM en JavaScript, normalmente se sigue estos pasos:
+
+                Seleccionar el elemento que deseas modificar.
+
+                js
+                Copiar
+                Editar
+                const titulo = document.getElementById('miTitulo');
+                Aplicar cambios a sus propiedades o atributos. Algunas de las operaciones más comunes son:
+
+                Cambiar el contenido de texto con textContent o innerText:
+                <p>
+                js
+                Copiar
+                Editar
+                titulo.textContent = 'Nuevo texto';
+                Cambiar el contenido HTML con innerHTML:
+                </p>
+                <p>
+                js
+                Copiar
+                Editar
+                titulo.innerHTML = '<strong>Texto en negrita</strong>';
+                Modificar un atributo con setAttribute:
+                </p>
+                <p>
+                js
+                Copiar
+                Editar
+                titulo.setAttribute('class', 'titulo-destacado');
+                Cambiar el estilo mediante la propiedad style:
+                </p>
+                <p>
+                js
+                Copiar
+                Editar
+                titulo.style.color = 'red';
+                Añadir o eliminar clases con classList:
+                </p>
+                <p>
+                js
+                Copiar
+                Editar
+                titulo.classList.add('resaltado');
+                titulo.classList.remove('resaltado');
+                Otras manipulaciones:
+                </p>
+                <p>
+                Crear y añadir elementos al DOM:
+                </p>
+                <p>
+                js
+                Copiar
+                Editar
+                const nuevoParrafo = document.createElement('p');
+                nuevoParrafo.textContent = 'Este es un párrafo nuevo';
+                document.body.appendChild(nuevoParrafo);
+                </p>
+                <p>
+                Eliminar un elemento:
+                </p>
+                <p>
+                js
+                Copiar
+                Editar
+                titulo.remove();
+                </p>
+                Estos métodos y propiedades permiten actualizar dinámicamente el contenido y apariencia de la página sin necesidad de recargarla.
+                Fuente: <a href="https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Manipulating_the_browser_DOM">MDN Web Docs</a>.
+            </p>
+            <p>
+                <h3>Respuesta de GitHub Copilot</h3>
+                Para modificar un elemento del DOM (Document Object Model) en JavaScript, puedes utilizar varios métodos y propiedades. Aquí hay algunos ejemplos comunes:
+                - Cambiar el contenido de texto de un elemento:
+                ```javascript
+                Fuente: <a href="https://developer.mozilla.org/es/docs/Web/API/Element/textContent">MDN Web Docs</a>.
+            </p>
+            <p>
+                <h3>Es esto cierto?</h3>
+                Una vez que hemos accedido al elemento que queremos modificar en el DOM, podemos comenzar a cambiar su contenido. Existen varias maneras de hacerlo con JavaScript, como se verá a continuación:
+                <p>
+                Modificando el texto en un elemento
+                Para cambiar el texto en un elemento, podemos utilizar la propiedad innerHTML del objeto. Por ejemplo, el siguiente código cambia el texto en un elemento con id «mi-id» a «¡Hola, mundo!»:
+                </p>
+                <p>
+                «`javascript
+                var elemento = document.getElementById («mi-id»);
+                elemento.innerHTML = «¡Hola, mundo!»;
+                «`
+                </p>
+                <p>
+                Modificando atributos en un elemento
+                También podemos modificar atributos en un elemento utilizando JavaScript. Para hacerlo, utilizamos la propiedad setAttribute (). Por ejemplo, el siguiente código cambia el valor del atributo src de una imagen:
+                </p>
+                <p>
+                «`javascript
+                var imagen = document.getElementById («mi-imagen»);
+                imagen.setAttribute («src», «nueva-imagen.jpg»);
+                «`
+                </p>
+                Por lo tanto, apesar de que la fuente que dio ChatGPT no existe, la información es correcta.
+                Fuente: <a href = "https://briknet.com/como-utilizar-javascript-para-modificar-el-contenido-del-dom-en-tiempo-real/">¿Cómo utilizar JavaScript para modificar el contenido del DOM en tiempo real?</a>
+            </p>
+            <li>¿Cuál es la diferencia entre getElementby* y querySelector*?</li>
+            <p>
+                <h3>Respuesta de ChatGPT</h3>
+                La principal diferencia entre los métodos getElementBy* y querySelector* radica en cómo y qué tipo de elementos seleccionan, así como en el tipo de objeto que devuelven:
+                <p>
+                Sintaxis de selección:
+                </p>
+                <p>
+                getElementById, getElementsByClassName, getElementsByTagName
+                Utilizan parámetros específicos:
+                </p>
+                <p>
+                document.getElementById("miId") selecciona un elemento por su atributo id.
+                </p>
+                <p>
+                document.getElementsByClassName("miClase") selecciona todos los elementos que tengan esa clase.
+                </p>
+                <p>
+                document.getElementsByTagName("tag") selecciona todos los elementos con esa etiqueta (por ejemplo, "div", "p", etc.).
+                </p>
+                <p>
+                querySelector y querySelectorAll
+                Pueden usar cualquier selector CSS (clases, ids, etiquetas, selectores compuestos, pseudo-clases, etc.):
+                </p>
+                <p>
+                document.querySelector("selector_css") retorna el primer elemento que coincida con el selector.
+                </p>
+                <p>
+                document.querySelectorAll("selector_css") retorna todos los elementos que coinciden, en forma de NodeList.
+                </p>
+                <p>
+                Tipo de valor retornado:
+                </p>
+                <p>
+                getElementById retorna un único elemento o null si no existe.
+                </p>
+                <p>
+                getElementsByClassName y getElementsByTagName retornan un HTMLCollection (colección “viva” que se actualiza automáticamente si el DOM cambia).
+                </p>
+                <p>
+                querySelector retorna un único elemento o null si no encuentra coincidencia.
+                </p>
+                <p>
+                querySelectorAll retorna un NodeList (por lo general es una colección “estática” que no se actualiza si el DOM cambia, a diferencia del HTMLCollection).
+                </p>
+                <p>
+                Flexibilidad vs. rendimiento:
+                </p>
+                <p>
+                getElementById o getElementsByClassName pueden ser algo más rápidas para casos puntuales (ID o clase) y no necesitan procesar un selector CSS.
+                </p>
+                <p>
+                querySelector o querySelectorAll son más flexibles porque aceptan cualquier selector CSS (muy útil para selectores complejos).
+                </p>
+                <p>
+                Conclusión:
+                <p>
+                Usa getElementById cuando necesites seleccionar un único elemento por su id.
+                </p>
+                <p>
+                Usa getElementsByClassName o getElementsByTagName si deseas colecciones en vivo y trabajas con nombres de clase o etiquetas simples.
+                </p>
+                <p>
+                Usa querySelector y querySelectorAll cuando necesites más flexibilidad en la selección con sintaxis de selectores CSS, o cuando sea útil obtener una NodeList estática de todos los elementos coincidentes.
+                </p>
+                Fuente: <a href="https://developer.mozilla.org/es/docs/Web/API/Document/querySelector">MDN Web Docs</a>.
+            </p>
+            <p>
+                <h3>Respuesta de GitHub Copilot</h3>
+                La diferencia entre `getElementById`, `getElementsByClassName`, `getElementsByTagName` y `querySelector`/`querySelectorAll` radica en cómo seleccionan los elementos del DOM y el tipo de resultado que devuelven:
+                <p>
+                - `getElementById(id)`: Devuelve un único elemento que tiene el atributo `id` especificado. Si no se encuentra ningún elemento, devuelve `null`.
+                </p>
+                <p>
+                - `getElementsByClassName(className)`: Devuelve una colección "HTMLCollection" de todos los elementos que tienen la clase especificada. Esta colección es "en vivo", lo que significa que se actualiza automáticamente si se añaden o eliminan elementos del DOM.
+                </p>
+                <p>
+                - `getElementsByTagName(tagName)`: Devuelve una colección "HTMLCollection" de todos los elementos con la etiqueta especificada. Al igual que `getElementsByClassName`, esta colección es "en vivo".
+                </p>
+                <p>
+                - `querySelector(selector)`: Devuelve el primer elemento que coincide con el selector CSS especificado. Si no se encuentra ningún elemento, devuelve `null`. Este método permite una mayor flexibilidad en la selección de elementos.
+                </p>
+                <p>
+                - `querySelectorAll(selector)`: Devuelve una lista estática "NodeList" de todos los elementos que coinciden con el selector CSS especificado. A diferencia de `getElementsByClassName` y `getElementsByTagName`, esta lista no se actualiza automáticamente si se realizan cambios en el DOM.
+                </p>
+                <p>
+                En resumen, `getElementById` selecciona un único elemento por su ID, mientras que `getElementsByClassName` y `getElementsByTagName` devuelven colecciones "en vivo" de elementos. Por otro lado, `querySelector` y `querySelectorAll` permiten seleccionar elementos utilizando selectores CSS, siendo más flexibles.
+                </p>
+                Fuente: <a href="https://developer.mozilla.org/es/docs/Web/API/Document/getElementById">MDN Web Docs</a>.
+            </p>
+            <p>
+                <h3>Es esto cierto?</h3>
+                "querySelector()y getElementByld()son funciones de JavaScript que se pueden utilizar para recuperar elementos HTML de una página web. recupera el elemento usando un selector CSS , mientras que lo recupera usando su atributo ID. querySelector()getElementByld()"
+                Por lo tanto, esta información es correcta.
+                Fuente: <a href = "https://builtin.com/articles/queryselector-vs-getelementbyid">QuerySelector() frente a GetElementById() en JavaScript</a>
+            </p>
+            <li>¿Qué es un evento?</li>
+            <p>
+                <h3>Respuesta de ChatGPT</h3>
+                En el contexto del DOM (Document Object Model) y JavaScript, un evento es una acción o suceso que ocurre en la página web, ya sea por interacción del usuario (por ejemplo, hacer clic, pasar el ratón, pulsar una tecla) o por procesos que ocurren en el propio navegador (como finalizar la carga de la página o reproducir un audio). Estos eventos sirven para “detectar” cuándo sucede algo y responder con una función o “manejador de eventos” (event handler).
+                Fuente: <a href="https://developer.mozilla.org/es/docs/Web/Events">MDN Web Docs</a>.
+            </p>
+            <p>
+                <h3>Respuesta de GitHub Copilot</h3>
+                Un evento en el contexto del DOM (Document Object Model) es una acción o suceso que ocurre en la página web y que puede ser detectado y manejado por JavaScript. Los eventos pueden ser generados por interacciones del usuario, como hacer clic en un botón, mover el mouse, escribir en un campo de texto, entre otros. También pueden ser generados por el navegador, como la carga de una página o la finalización de una animación.
+                Los eventos permiten a los desarrolladores crear aplicaciones web interactivas y dinámicas al responder a las acciones del usuario o a cambios en el estado de la aplicación.
+                Fuente: <a href="https://developer.mozilla.org/es/docs/Web/Events">MDN Web Docs</a>.
+            </p>
+            <p>
+                <h3>Es esto cierto?</h3>
+                "Los eventos DOM permiten que JavaScript agregue detectores de eventos o controladores de eventos a elementos HTML.
+
+                Para obtener un tutorial sobre eventos, lea nuestro Tutorial de eventos de JavaScript ."
+                Por lo tanto, esta información es correcta.
+                Fuente: <a href = "https://www.w3schools.com/jsref/dom_obj_event.asp">¿Qué es un evento en JavaScript?</a>
+            </p>
+            <li>¿Qué es un listener?</li>
+            <p>
+                <h3>Respuesta de ChatGPT</h3>
+                En el contexto de JavaScript y el DOM, un listener (o event listener) es una función que “escucha” o “espera” a que ocurra un determinado evento en un elemento de la página. Cuando ese evento sucede (por ejemplo, un clic, un movimiento del ratón, o una pulsación de tecla), el listener se ejecuta.
+
+                Para asociar un listener a un evento, se utiliza con frecuencia el método addEventListener(), que recibe como parámetros el tipo de evento (por ejemplo, "click") y la función que se ejecutará cuando ocurra ese evento
+                Fuente: <a href="https://developer.mozilla.org/es/docs/Web/API/EventTarget/addEventListener">MDN Web Docs</a>.
+            </p>
+            <p>
+                <h3>Respuesta de GitHub Copilot</h3>
+                Un listener (o event listener) es una función que espera y responde a un evento específico en el DOM (Document Object Model). Cuando se produce el evento, el listener se activa y ejecuta una función asociada a ese evento. Los listeners son fundamentales para crear interactividad en las páginas web.
+                Para agregar un listener a un elemento, se utiliza el método `addEventListener(event, function)`, donde `event` es el tipo de evento que deseas escuchar (como "click", "mouseover", "keydown", etc.) y `function` es la función que se ejecutará cuando ocurra ese evento.
+                Fuente: <a href="https://developer.mozilla.org/es/docs/Web/API/EventTarget/addEventListener">MDN Web Docs</a>.
+            </p>
+            <p>
+                <h3>Es esto cierto?</h3>
+                "Un event listener es una función que espera y responde a un evento específico en el DOM (Document Object Model). Cuando se produce el evento, el listener se activa y ejecuta una función asociada a ese evento. Los listeners son fundamentales para crear interactividad en las páginas web."
+                Por lo tanto, esta información es correcta.
+                Fuente: <a href = "https://developer.mozilla.org/es/docs/Web/API/EventTarget/addEventListener">MDN Web Docs</a>
+            </p>
+            <li>¿Qué es un callback?</li>
+            <p>
+                <h3>Respuesta de ChatGPT</h3>
+                En JavaScript, un callback es simplemente una función que se pasa como argumento a otra función. Una vez que la función principal ha hecho su trabajo (o cuando se produce un evento), “devuelve la llamada” (invoca) a la función callback para que se ejecute. Esto permite manejar operaciones que pueden ser asíncronas, como peticiones a un servidor o la respuesta a eventos del usuario.
+                Fuente: <a href="https://developer.mozilla.org/es/docs/Glossary/Callback_function">MDN Web Docs</a>.
+            </p>
+            <p>
+                <h3>Respuesta de GitHub Copilot</h3>
+                Un callback es una función que se pasa como argumento a otra función y que se ejecuta después de que la función principal ha completado su tarea. Los callbacks son comunes en JavaScript, especialmente en programación asíncrona, donde permiten manejar operaciones que pueden tardar un tiempo en completarse, como solicitudes HTTP o eventos del usuario.
+                Fuente: <a href="https://developer.mozilla.org/es/docs/Glossary/Callback_function">MDN Web Docs</a>.
+            </p>
+            <p>
+                <h3>Es esto cierto?</h3>
+                "Un callback es una función que se pasa como argumento a otra función y que se ejecuta después de que la función principal ha completado su tarea. Los callbacks son comunes en JavaScript, especialmente en programación asíncrona, donde permiten manejar operaciones que pueden tardar un tiempo en completarse, como solicitudes HTTP o eventos del usuario."
+                Por lo tanto, esta información es correcta.
+                Fuente: <a href = "https://developer.mozilla.org/es/docs/Glossary/Callback_function">MDN Web Docs</a>
+            <li>¿Qué es un objeto de evento?</li>
+        </ol>        
+    </div>
+
+    <h3>Ejercicios de código</h3>
+    <p>Usa ChatGPT y copilot para resolver los ejercicios. Por cada ejercicio, pídele a ChatGPT o a copilot que te genere los comentarios. Verifica los resultados antes de subirlos a tu repo.</p>
+
+    <div class="container">
+        <p>1. Modifica el siguiente elemento para mostrar la posición del mouse en el documento:</p>
+        <p id="mousePosition">Posición del mouse: </p>
+    </div>
+
+    <div class="container">
+        <p>2. Al dar click al siguiente botón, obtén el nombre y apellido de las siguientes cajas de texto, y agrega, después del botón, un elemento que tenga el nombre completo.</p>
+        <form id="form1">
+            First name: <input id="form-fname" type="text" name="fname" ><br>
+            Last name: <input id="form-lname" type="text" name="lname" ><br><br>
+        <input id="form1-submit" type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div class="container">
+        <p>3. Agrega el código para agregar una fila, o una columna, a la siguiente tabla al dar click al botón correspondiente.</p>
+        <table id="sampleTable">
+            <tr>
+                <td>Row 1 column 1</td>
+                <td>Row 1 column 2</td>
+            </tr>
+            <tr>
+                <td>Row 2 column 1</td>
+                <td>Row 2 column 2</td>
+            </tr>
+        </table><br>
+        <input id="btn-insert-r" type="button" value="Insert row">
+        <input id="btn-insert-c" type="button" value="Insert column">
+    </div>
+
+    <div class="container">
+        <p>4. Incluye dos cajas de input, para solicitar al usuario la posición de la fila y columna de la siguiente tabla, y otra para solicitar un texto. Al apretar el botón, actualiza el contenido de esa tabla en la posición que solicitaste, con la cadena de texto que solicitaste.</p>
+        <table id="myTable">
+            <tr>
+                <td>Row1 cell1</td>
+                <td>Row1 cell2</td>
+                <td>Row1 cell3</td>
+            </tr>
+            <tr>
+                <td>Row2 cell1</td>
+                <td>Row2 cell2</td>
+                <td>Row2 cell3</td>
+            </tr>
+            <tr>
+                <td>Row3 cell1</td>
+                <td>Row3 cell2</td>
+                <td>Row3 cell3</td>
+            </tr>
+            </table><form><br>
+            <input id="rowIndex" type="text" placeholder="Row Index">
+            <input id="colIndex" type="text" placeholder="Col Index">
+            <input id="newValue" type="text" placeholder="New Value">
+            <input id="btn-change" type="button" value="Change content">
+    </div>
+
+    <div class="container">
+        <p>5. Agrega el código para quitar o agregar elementos a la lista de opciones. Los colores pueden ser aleatorios.</p>
+        <form>
+            <select id="colorSelect">
+                <option>Red</option>
+                <option>Green</option>
+                <option>White</option>
+                <option>Black</option>
+            </select>
+            <input id="btn-add-color" type="button" value="Add color">
+            <input id="btn-rmv-color" type="button" value="Remove color">
+        </form>
+    </div>
+
+    <div class="container">
+        <p>6. Al poner el mouse encima de la siguiente imagen, genera dos números aleatorios entre 300 y 600 para el width y height de una imagen. Reemplaza la imagen de placeholder por otra similar con el tamaño random que generaste. El evento solo se dispara cuando el mouse entra en la imagen.</p>
+        <img id="imagenGato" src="http://placekitten.com/200/300">
+    </div>
+
+    <div class="container">
+        <h1>Conclusiones</h1>
+
+        <h4>Experiencia general</h4>
+        <p>
+            La experienia que tuve al realizar esta actividad fue bastante buena, esta actividad me permitío comparar dos modelos diferentes de Inteligencia Artificial haciendo las mismas tareas, lo que me ayudó a observar y analizar que uso le podemos dar a los diferentes modelos que existen actualmente.
+        </p>
+        <h4>¿Cuándo y para qué usarías ChatGPT y cuándo Copilot?</h4>
+        <p>
+            Yo usaría ChatGPT para esas tareas donde es importante la investigación acerca de recursos y como una guía para poder analizar mis errores en sintaxis de código y ver opciones de como podría mejorar.
+            <p>
+            Copilot por otra parte, lo usaría para obtener soluciones más tecnicas en cuanto a la creación de código, ya que las soluciones que este ofrece han probado ser más funcionales que las que da Chat, sin embargo de igual forma sería un guía a la hora de aprender de implementación de métodos que se me dificulten en su lógica y no para una programación completa.
+            </p>
+        </p>
+        <h4>Ventajas de usar AI para programar</h4>
+        <p>
+            El uso de la AI para programar posee ventajas como la visualización más rápida de errores lógicos en los códigos realizados, además de que permiten explorar aprendizajes con nuevas maneras de desarrollar métodos vistos en clase
+        </p>
+        <h4>Desventajas de usar AI para programar</h4>
+        <p>
+            La principal desventaja que le veo a la AI para programar es que muchas veces al estarla usando y pidiendo ideas nuevas para implementaciones solo repite lo mismo que ya hizo, razón por la cual no es recomendable para un desarrollo completo. Además de que a pesar de que se puede aprender de estas herramientas en mi experiencia me ha tocado buscar documentación ya que a veces los recursos que te dan como fuentes no existen y pueden dar información que no existe.
+        </p>
+    </div>
+    <nav>
+        <h3>Páginas: </h3>
+        <ul> 
+            <li><a href = "Git_Github.html"> Git y Github</a></li>
+            <li><a href = "Terminal.html"> Comandos de la Terminal</a></li>
+            <li><a href = "CSS.html"> Básicos de CSS</a></li>
+            <li><a href = "Blog.html"> Página de Inicio</a></li>
+        </ul>
+        </nav>
+</body>
+</html>

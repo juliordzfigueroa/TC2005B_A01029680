@@ -1,3 +1,8 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
 body{
     background-color: white;
     height: 100vh;
@@ -27,6 +32,7 @@ body{
     gap: 10px;
     grid-template-columns: repeat(20, 1fr);
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    height: calc(100% - 16px);
 }
 
 #grid-subitem-1-1{
@@ -78,6 +84,7 @@ body{
     gap: 10px;
     grid-template-columns: repeat(20, 1fr);
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+    height: calc(100% - 16px);
 }
 
 #grid-subitem-2-1{

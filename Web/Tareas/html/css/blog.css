@@ -55,10 +55,12 @@ h5{
     text-align: center;
 }
 
-img{
+
+#imagenBlog{
     height: 200px;
     width: 200px;
 }
+
 
 header{
     text-align: center;
